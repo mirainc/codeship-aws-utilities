@@ -53,16 +53,6 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
 
-      - name: Build base image
-        id: build-base
-        uses: docker/build-push-action@v3
-        with:
-          context: base/
-          output: type=docker
-          tags: codeship-aws-base:latest
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
-
       # Build and push Docker image with Buildx (don't push on PR)
       # https://github.com/docker/build-push-action
       - name: Build and push Docker image
