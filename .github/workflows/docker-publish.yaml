@@ -58,7 +58,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: base/
-          push: false
+          output: type=docker
           tags: codeship-aws-base:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
