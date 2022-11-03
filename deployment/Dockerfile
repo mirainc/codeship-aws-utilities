@@ -1,4 +1,4 @@
-FROM codeship/aws-base:latest
+FROM codeship-aws-base:latest
 LABEL maintainer='Codeship Inc., <maintainers@codeship.com>'
 
 RUN \
